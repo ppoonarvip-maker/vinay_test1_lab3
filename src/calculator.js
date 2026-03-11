@@ -9,6 +9,7 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+
 function add(a, b) {
   return a + b;
 }
@@ -26,6 +27,24 @@ function divide(a, b) {
     return 'Error: Division by zero';
   }
   return a / b;
+}
+
+function modulo(a, b) {
+  if (b === 0) {
+    return 'Error: Division by zero';
+  }
+  return a % b;
+}
+
+function power(base, exponent) {
+  return Math.pow(base, exponent);
+}
+
+function squareRoot(n) {
+  if (n < 0) {
+    return 'Error: Negative input';
+  }
+  return Math.sqrt(n);
 }
 
 function askOperation() {
@@ -58,4 +77,4 @@ function askOperation() {
   });
 }
 
-module.exports = { add, subtract, multiply, divide };
+module.exports = { add, subtract, multiply, divide, modulo, power, squareRoot };
